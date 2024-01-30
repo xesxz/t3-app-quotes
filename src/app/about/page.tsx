@@ -1,6 +1,7 @@
 
 import React from 'react'
 import { api } from "~/trpc/server";
+export const dynamic = "force-static"
 export default async function about() {
 
   const allPost = await api.post.getList.query();
@@ -22,3 +23,5 @@ export default async function about() {
    </div>
   )
 }
+
+

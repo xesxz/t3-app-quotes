@@ -1,5 +1,6 @@
 import React from 'react'
 import { api } from "~/trpc/server";
+export const dynamic = "force-static"
 export default async function page() {
   const allPost = await api.quotes.getList.query();
 
