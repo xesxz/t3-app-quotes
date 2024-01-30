@@ -17,6 +17,11 @@ export default async function Home() {
         <Link href="/about">
        <span className="decoration-1 underline">About Page</span>
         </Link>
+        <Link href="/quotes">
+       <span className="decoration-1 underline">quotes</span>
+        </Link>
+
+
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
           <Link
             className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
