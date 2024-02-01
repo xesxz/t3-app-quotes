@@ -21,9 +21,11 @@ model Post {
 
 model Quotes {
     id        Int      @id @default(autoincrement())
-    content      String
+    content   String
+    tag       String?
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
+
 
     @@index([content])
 }

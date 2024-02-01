@@ -28,6 +28,8 @@ export const quotesRouter = createTRPCRouter({
     return ctx.db.quotes.create({
       data: {
         content: input.content,
+        // tag:'ss'
+
       },
     });
   }),
