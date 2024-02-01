@@ -17,4 +17,19 @@ export const quotesRouter = createTRPCRouter({
       orderBy: { createdAt: "desc" },
     });
   }),
+
+
+  create: publicProcedure
+  .input(z.object({ content: z.string().min(1) }))
+  .mutation(async ({ ctx, input }) => {
+    // simulate a slow db call
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    return ctx.db.quotes.create({
+      data: {
+        content: input.content,
+      },
+    });
+  }),
+
 });
